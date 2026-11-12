@@ -1,0 +1,38 @@
+[project]
+name = "credit-sim"
+version = "1.0.0"
+description = "Monte Carlo credit portfolio loss simulation"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Santiago Diaz Ricagno" }]
+dependencies = [
+  "numpy==2.5.4",
+  "scipy==1.18.1",
+  "pandas==3.1.1",
+  "matplotlib==3.11.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "ruff==0.17.4"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+src = ["src", "tests", "run_simulation.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*.ipynb" = ["E402"]
