@@ -1,0 +1,17 @@
+"""Published run settings. The README figures come from these values."""
+
+N_LOANS = 2_500
+N_SIMS = 40_000
+N_SIMS_RHO = 30_000
+SEED = 42
+RHO = 0.15
+T_DF = 5.0
+ALPHAS = (0.95, 0.99, 0.999)
+RHO_GRID = (0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40)
+PD_STRESS_MULTIPLIER = 1.5
+SHOCK_SECTOR = "CRE"
+SHOCK_SECTOR_MULTIPLIER = 2.0
+PD_CAP = 0.95
+CHUNK_SIZE = 4_000
+
+ALPHA_LABEL = {0.95: "95%", 0.99: "99%", 0.999: "99.9%"}
